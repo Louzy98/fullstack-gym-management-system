@@ -1,0 +1,713 @@
+{
+	"info": {
+		"_postman_id": "63f22ad5-8beb-4cea-b1b6-c95ab11ab866",
+		"name": "PWA GYM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19899335"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Disposition",
+								"value": "form-data; name=\"picture\"; filename=\"anime-boy-19-.jpg\"",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "/C:/Users/paulo/OneDrive/Imagens/57f902a2163bc4914dba13d97eff94e9.jpg"
+								},
+								{
+									"key": "name",
+									"value": "Paulo1111",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "paulo111@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12311",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "2511",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Rua Boa11",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Portugal11",
+									"type": "text"
+								},
+								{
+									"key": "role[name]",
+									"value": "normal",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "role.role[scope]",
+									"value": "normal",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"paulo@gmail.com\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users/63b457ca683c26ec4c15e309",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"63b457ca683c26ec4c15e309"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Perfil",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWM2YWU3ZTllOGY2N2E5NTE1MTEyZiIsIm5hbWUiOiJUaWFnbyIsInJvbGUiOlsiZ2VzdG9yIl0sImlhdCI6MTY3MjI0ODA5MywiZXhwIjoxNjcyMzM0NDkzfQ.GlrAM8lNoVRl1O6fU5UOysH8P0vo34Hwl44x_paKE-E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/users/perfil",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"perfil"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tiaguinho\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/63b457ca683c26ec4c15e309",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"63b457ca683c26ec4c15e309"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users/63b458f30d8f98bc836093f4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"63b458f30d8f98bc836093f4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aulas",
+			"item": [
+				{
+					"name": "Criar Aulas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWM2YWU3ZTllOGY2N2E5NTE1MTEyZiIsIm5hbWUiOiJUaWFnbyIsInJvbGUiOlsiZ2VzdG9yIl0sImlhdCI6MTY3MjI0Mzk5MSwiZXhwIjoxNjcyMzMwMzkxfQ.UVhnA7EEs5uvJjmfBhO8oJOu1Em3aoTP6bBWRhk5dv8",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "TesteAula1233",
+									"type": "text"
+								},
+								{
+									"key": "room",
+									"value": "143",
+									"type": "text"
+								},
+								{
+									"key": "beginDate",
+									"value": "2023-02-01",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-02-02",
+									"type": "text"
+								},
+								{
+									"key": "capacity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "aulaImage",
+									"type": "file",
+									"src": "/C:/Users/Tiago/Desktop/hidroginastica.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/aulas/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todas as aulas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/aulas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inscrever nas aulas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"_id\":\"63c67bf5c608b245e8e912d6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/aulas/63c91fae40b8ff1f81e0927e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas",
+								"63c91fae40b8ff1f81e0927e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Aula",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/aulas/63b46161d5933ca982f312b0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas",
+								"63b46161d5933ca982f312b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Aula",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\":\"Pilates\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/aulas/update/63c6bc75f02afb4dbb946f66",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas",
+								"update",
+								"63c6bc75f02afb4dbb946f66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aula BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/aulas/63c7c89603b2fa17d7f65db3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas",
+								"63c7c89603b2fa17d7f65db3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desinscrever das aulas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"_id\":\"63c55080b7d282b5a450ad69\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/aulas/remove/63c91fae40b8ff1f81e0927e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas",
+								"remove",
+								"63c91fae40b8ff1f81e0927e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TESTE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"_id\":\"63c67bf5c608b245e8e912d6\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/aulas/63c91fae40b8ff1f81e0927e/subscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas",
+								"63c91fae40b8ff1f81e0927e",
+								"subscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aulas por user Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/aulas/subscription/63b47ec5d20ad3e8766cab54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"aulas",
+								"subscription",
+								"63b47ec5d20ad3e8766cab54"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Acessos",
+			"item": [
+				{
+					"name": "Criar Acessos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"63b457ca683c26ec4c15e309\",\r\n    \"local\": \"entrada\",\r\n    \"entryHour\":\"2023-10-20 10:40:40\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/acessos/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"acessos",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acessos by userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/acessos/do?user=63b47aabb9b72faafe77e676",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"acessos",
+								"do"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "63b47aabb9b72faafe77e676"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TODOS OS ACESSOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/acessos/63b4964ba7ec74aaf4f3080a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"acessos",
+								"63b4964ba7ec74aaf4f3080a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acessos by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Count Entradas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/acessos/count/entrada",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"acessos",
+								"count",
+								"entrada"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mensagens",
+			"item": [
+				{
+					"name": "Enviar mensagem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\": \"Texto\",\r\n    \"text\": \"bla bla bla\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/mensagens/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"mensagens",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todas Mensagens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/mensagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"mensagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove messages",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/mensagens/63cc4ef8804772c764f9575a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"mensagens",
+								"63cc4ef8804772c764f9575a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

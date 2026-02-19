@@ -1,0 +1,65 @@
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(0, 0, 0);
+  a:hover {
+    color: rgb(196, 196, 196);
+  }
+}
+
+.link {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 2px;
+  color: rgb(255, 255, 255);
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin-bottom: 10px;
+  padding: 10px;
+
+  .img {
+    height: 137%;
+  }
+}
+
+.counts {
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  width: 100px;
+  margin: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  color: rgb(41, 41, 41);
+}
+
+.button{
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-color: black;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(0, 0, 0);
+  --bs-btn-hover-bg: #00000000;
+  --bs-btn-hover-border-color: rgba(255, 0, 0, 0);
+  --bs-btn-hover-color: rgb(196, 196, 196);
+  --bs-btn-active-bg: #565e6400;
+  --bs-btn-active-border-color: #51585e00;
+  --bs-btn-active-color: rgb(196, 196, 196);
+}
+.hovered {
+  cursor: pointer;
+  filter: brightness(80%); /* an example of effect */
+}
